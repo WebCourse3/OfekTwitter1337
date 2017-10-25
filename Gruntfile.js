@@ -41,6 +41,7 @@ module.exports = function (grunt) {
                     atBegin: true,
                 },
                 files: [
+                    'app/*',
                     'app/routes/**/*.js',
                     'app/dal/**/*.js',
                     'app/app.js',

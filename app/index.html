@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="node/angular-material/angular-material.css">
 	<link rel="stylesheet" href="site.css">
 </head>
-<body ng-app="ofekTwitter">
+<body data-ng-app="ofekTwitter">
 
 <div ng-controller="twitterController" ng-cloak>
 	<md-content class="md-padding">
@@ -41,19 +41,14 @@
 		</div>
 	</md-content>
 </div>
-<div ng-view></div>
+<div data-ng-view></div>
 
 
 <script src="node/angular/angular.js"></script>
 <script src="node/angular-route/angular-route.js"></script>
 <script src="node/angular-material/angular-material.js"></script>
 <script src="node/angular-animate/angular-animate.js"></script>
-<script src="twitterController.js"></script>
 <script src="ofekTwitter.js"></script>
-
-<script>
-
-</script>
 
 </body>
 </html>

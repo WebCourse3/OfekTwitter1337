@@ -45,3 +45,11 @@ ofekTwitter.controller('signIpController', function ($scope) {
 ofekTwitter.controller('usersController', function ($scope) {
     $scope.message = 'usersController';
 });
+
+ofekTwitter.controller('twitterController', function ($scope) {
+        $scope.currentNavItem = 'signIn';
+        console.log("stuff");
+        $scope.goTo = function (page) {
+            console.log("Goto " + page);
+        }
+    });
