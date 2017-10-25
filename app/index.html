@@ -1,23 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 	<base href="/">
-	<meta charset="utf-8">
-	<meta name="google-signin-client_id" content="4644920241-or3rocgiqb3156n1r5j7r40taetolkja.apps.googleusercontent.com">
 	<base target="_parent"/>
+	<meta charset="utf-8">
+	<!--<meta name="google-signin-client_id" content="4644920241-or3rocgiqb3156n1r5j7r40taetolkja.apps.googleusercontent.com">-->
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" href="node/angular-material/angular-material.css">
 	<link rel="stylesheet" href="site.css">
 </head>
-<body ng-app="ofekTwitter1337">
+<body ng-app="ofekTwitter">
 
-<div ng-controller="twitterController"></div>
+<div ng-controller="twitterController" ng-cloak>
+	<md-content class="md-padding">
+		<md-nav-bar
+				md-no-ink-bar="disableInkBar"
+				md-selected-nav-item="currentNavItem"
+				nav-bar-aria-label="navigation links">
+			<md-nav-item md-nav-click="goTo('signIn')" name="signIn">
+				Sign In
+			</md-nav-item>
+			<md-nav-item md-nav-click="goTo('signUp')" name="signUp">
+				Sign Up
+			</md-nav-item>
+			<md-nav-item md-nav-click="goTo('users')" name="users">
+				Users
+			</md-nav-item>
+			<!-- these require actual routing with ui-router or ng-route, so they
+            won't work in the demo
+            <md-nav-item md-nav-href="#page4" name="page5">Page Four</md-nav-item>
+            <md-nav-item md-nav-sref="app.page5" name="page4">Page Five</md-nav-item>
+            You can also add options for the <code>ui-sref-opts</code> attribute.
+            <md-nav-item md-nav-sref="page6" sref-opts="{reload:true, notify:true}">
+              Page Six
+            </md-nav-item>
+            -->
+		</md-nav-bar>
+		<div class="ext-content">
+			External content for `<span>{{currentNavItem}}</span>`.
+		</div>
+	</md-content>
+</div>
+<div ng-view></div>
 
-<script src="twitterController.js.js"></script>
-<script src="/node_modules/angular/angular.js"></script>
-<script src="/node_modules/angular-aria/angular-aria.js"></script>
-<script src="/node_modules/angular-animate/angular-animate.js"></script>
-<script src="/node_modules/angular-material/angular-material.js"></script>
+
+<script src="node/angular/angular.js"></script>
+<script src="node/angular-route/angular-route.js"></script>
+<script src="node/angular-material/angular-material.js"></script>
+<script src="node/angular-animate/angular-animate.js"></script>
+<script src="twitterController.js"></script>
+<script src="ofekTwitter.js"></script>
 
 <script>
 

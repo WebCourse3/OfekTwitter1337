@@ -9,6 +9,14 @@
     "angular-animate": "^1.6.6",
     "angular-aria": "^1.6.6",
     "angular-material": "^1.1.5",
-    "angular-messages": "^1.6.6"
+    "angular-messages": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "express": "^4.16.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-parallel": "^0.5.1",
+    "morgan": "^1.9.0"
   }
 }
